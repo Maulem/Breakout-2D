@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Pontos : MonoBehaviour
+public class LifeUI : MonoBehaviour
 {
     Text textComp;
     GameManager gm;
@@ -16,6 +16,6 @@ public class UI_Pontos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textComp.text = $"Pontos: {gm.pontos}";
+        textComp.text = $"Vidas: {gm.vidas}";
     }
 }

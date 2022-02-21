@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-public class UI_FimDeJogo : MonoBehaviour
+public class EndgameUI : MonoBehaviour
 {
     public Text message;
 

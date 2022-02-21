@@ -2,24 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class UI_Pause : MonoBehaviour
-{
+public class PauseUI : MonoBehaviour {
 
     GameManager gm;
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         gm = GameManager.GetInstance();
     }
     
-    public void Retornar()
-    {
+    public void Retornar() {
         gm.ChangeState(GameManager.GameState.GAME);
     }
 
-    public void Inicio()
-    {
+    public void Inicio() {
         gm.ChangeState(GameManager.GameState.MENU);
+        gm.resetar = 3;
     }
-
 }
