@@ -5,7 +5,7 @@ using UnityEngine;
 public class Brick: MonoBehaviour {
 
     public Color g1 = new Color(0.17f, 1, 40);
-    public Color g2 = new Color(0.14f, 0.85f, 30);
+    public Color g2 = new Color(0.13f, 0.80f, 30);
     public Color g3 = new Color(0.10f, 0.55f, 20);
     public Color g4 = new Color(0.06f, 0.35f, 10);
 

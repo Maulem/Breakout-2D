@@ -19,11 +19,11 @@ public class BrickSpawner : MonoBehaviour {
             foreach (Transform child in transform) {
                 GameObject.Destroy(child.gameObject);
             }
-            for(int i = 0; i < 12; i++) {
+            for(int i = 0; i < 10; i++) {
                 for(int j = 0; j < 4; j++) {
                     int special = Random.Range(0, 10);
 
-                    Vector3 posicao = new Vector3(-8.5f + 1.55f * i, 4 - 0.55f * j);
+                    Vector3 posicao = new Vector3(-7.0f + 1.55f * i, 4 - 0.55f * j);
 
                     if (special == 0 || special == 1) {
                         GameObject brickobj = (GameObject)Instantiate(BlockSpecial, posicao, Quaternion.identity, transform);
