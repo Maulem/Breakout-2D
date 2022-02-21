@@ -23,5 +23,6 @@ public class EndgameUI : MonoBehaviour
     public void Voltar()
     {
         gm.ChangeState(GameManager.GameState.GAME);
+        gm.resetar = 2;
     }
 }

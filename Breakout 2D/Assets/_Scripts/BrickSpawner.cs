@@ -27,9 +27,8 @@ public class BrickSpawner : MonoBehaviour {
 
                     if (special == 0 || special == 1) {
                         GameObject brickobj = (GameObject)Instantiate(BlockSpecial, posicao, Quaternion.identity, transform);
-                        int life = (j - 3) * -1;
 
-                        brickobj.GetComponent<BrickSpecial>().life = life;
+                        brickobj.GetComponent<BrickSpecial>().life = 0;
 
                     } else {
                         GameObject brickobj = (GameObject)Instantiate(Block, posicao, Quaternion.identity, transform);

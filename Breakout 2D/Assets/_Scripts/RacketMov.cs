@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class RacketMov : MonoBehaviour {
     [Range(1, 15)]
     public float velocidade = 5.0f;
@@ -17,6 +19,10 @@ public class RacketMov : MonoBehaviour {
     Color rgb;
 
     Vector2 originalPos;
+
+    private void OnTriggerEnter2D(Collider2D col) {
+        GetComponent<AudioSource>().Play();
+    }
 
     // Start is called before the first frame update
     void Start() {
@@ -108,6 +114,8 @@ public class RacketMov : MonoBehaviour {
 
         if (gm.resetar == 2) {
             Rend.transform.localScale = new Vector2(2, 0.25f);
+            sizex = 0.05f;
+            sizex2 = 0.95f;
             gm.resetar = 1;
         }
 

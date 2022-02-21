@@ -12,7 +12,6 @@ public class BallMov : MonoBehaviour {
 
     
     private void OnTriggerEnter2D(Collider2D col) {
-        audio.Play();
         if(col.gameObject.CompareTag("Player")) {
             float dirX = Random.Range(-5.0f, 5.0f);
             float dirY = Random.Range(1.0f, 5.0f);
@@ -21,10 +20,12 @@ public class BallMov : MonoBehaviour {
         }
         else if(col.gameObject.CompareTag("Tijolo")) {
             direcao = new Vector3(direcao.x, -direcao.y);
+            GetComponent<AudioSource>().Play();
             gm.pontos++;
         }
         else if(col.gameObject.CompareTag("TijoloTop")) {
             direcao = new Vector3(direcao.x, -direcao.y);
+            GetComponent<AudioSource>().Play();
             gm.pontos+= 10;
             gm.powerup = Random.Range(1, 3);
         }
