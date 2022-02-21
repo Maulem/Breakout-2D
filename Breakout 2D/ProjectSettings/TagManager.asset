@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tijolo
-  - TijoloTop
   layers:
   - Default
   - TransparentFX
