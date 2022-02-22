@@ -27,7 +27,7 @@ public class BallMov : MonoBehaviour {
             direcao = new Vector3(direcao.x, -direcao.y);
             GetComponent<AudioSource>().Play();
             gm.pontos+= 10;
-            gm.powerup = Random.Range(1, 3);
+            gm.powerup = Random.Range(1, 5);
         }
     }
 
@@ -74,6 +74,11 @@ public class BallMov : MonoBehaviour {
 
         if (gm.powerup == 2) {
             velocidade = 2.5f;
+            gm.powerup = 0;
+        }
+
+        if (gm.powerup == 3) {
+            velocidade = 7.5f;
             gm.powerup = 0;
         }
     }

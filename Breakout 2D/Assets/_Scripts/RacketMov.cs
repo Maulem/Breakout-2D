@@ -62,6 +62,13 @@ public class RacketMov : MonoBehaviour {
             sizex2 = 0.85f;
             gm.powerup = 0;
         }
+
+        if (gm.powerup == 4) {
+            Rend.transform.localScale = new Vector2(1, 0.25f);
+            sizex = 0.03f;
+            sizex2 = 0.97f;
+            gm.powerup = 0;
+        }
         
         // Debug.Log($"OUT2: {posicaoViewport.x}");
 
